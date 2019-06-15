@@ -1,0 +1,12 @@
+<div fxLayout fxLayoutAlign="flex-start" fxLayout="row wrap" fxLayout.xs="column">
+  <ol class="breadcrumb">
+    <li *ngFor="let breadcrumb of breadcrumbs | async; last as isLast;" class="breadcrumb-item"
+      [ngClass]="{'active': isLast, 'linkable': !isLast}" aria-current="page">
+      <a *ngIf="!isLast; else lastRoute" [routerLink]="[breadcrumb.url]" routerLinkActive="active" mat-button
+        color="primary">
+        {{ breadcrumb.label }}
+      </a>
+      <ng-template #lastRoute><span>{{ breadcrumb.label }}</span></ng-template>
+    </li>
+  </ol>
+</div>

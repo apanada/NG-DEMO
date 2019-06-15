@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 import { FooterComponent } from './components/navigation/footer/footer.component';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -23,7 +24,8 @@ import { MatMenuModule } from '@angular/material/menu';
     AppComponent,
     HeaderComponent,
     SidenavListComponent,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

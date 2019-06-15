@@ -11,7 +11,7 @@ import { sp } from '@pnp/sp';
 import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent }
+  { path: '', component: LandingComponent, data: { breadcrumb: 'Home' } }
 ];
 
 sp.setup({

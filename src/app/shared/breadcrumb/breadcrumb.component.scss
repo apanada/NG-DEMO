@@ -1,0 +1,33 @@
+.breadcrumb {
+  background-color: transparent;
+
+  li {
+    display: inline;
+
+    &.linkable {
+      &:after {
+        font-family: "Material Icons";
+        content: "\e5cc";
+        font-size: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    &.active {
+      padding: 0 10pt;
+      vertical-align: middle;
+      font-size: small;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: medium;
+    }
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .breadcrumb {
+      padding-left: 0;
+    }
+  }
+}
