@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  webAbsoluteUrl: "https://ngeniouscorp.sharepoint.com/sites/admin"
 };

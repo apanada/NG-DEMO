@@ -1,4 +1,6 @@
 @import '~@angular/material/theming';
+@import './app/navigation/footer/footer-theme';
+
 @include mat-core();
 
 // below defines your custom color to build a theme palette from
@@ -49,14 +51,7 @@ $theme-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
   @include angular-material-theme($alternate-theme);
 }
 
-@font-face {
-  font-family: ProximaNova;
-  src: url("/assets/font/Proxima Nova Alt Thin.otf") format("truetype");
-}
-
-* {
-  font-family: ProximaNova;
-}
+@include footer-theme($theme-theme);
 
 .mat-card-content,
 .mat-card-actions {

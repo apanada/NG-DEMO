@@ -10,3 +10,12 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("/assets/font/Proxima Nova Alt Thin.otf") format("truetype");
+}
+
+* {
+  font-family: ProximaNova;
+}

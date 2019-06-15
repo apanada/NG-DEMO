@@ -5,10 +5,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { sp } from '@pnp/sp';
+import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
   { path: '', component: LandingComponent }
 ];
+
+sp.setup({
+  sp: {
+    baseUrl: environment.webAbsoluteUrl
+  }
+});
 
 @NgModule({
   declarations: [LandingComponent],
