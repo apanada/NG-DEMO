@@ -1,0 +1,64 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// below defines your custom color to build a theme palette from
+$custom-blue: (50: #7fdddd,
+  100: #7faedd,
+  200: #7f7fdd,
+  300: #7faedd,
+  400: #7faedd,
+  500: #7faedd,
+  600: #7faedd,
+  700: #7faedd,
+  800: #7faedd,
+  900: #7faedd,
+  A100: #7faedd,
+  A200: #7faedd,
+  A400: #7faedd,
+  A700: #7faedd,
+  contrast: (50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  ));
+
+$theme-primary: mat-palette($mat-indigo);
+$theme-accent: mat-palette($mat-pink, 500, 900, A100);
+$theme-warn: mat-palette($mat-deep-orange);
+
+$theme-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+
+@include angular-material-theme($theme-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent: mat-palette($mat-yellow, 400);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+
+  @include angular-material-theme($alternate-theme);
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("/assets/font/Proxima Nova Alt Thin.otf") format("truetype");
+}
+
+* {
+  font-family: ProximaNova;
+}
+
+.mat-card-content,
+.mat-card-actions {
+  margin: 0 16px !important;
+}
