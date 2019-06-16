@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  webAbsoluteUrl: "https://ngeniouscorp.sharepoint.com/sites/admin"
+  webAbsoluteUrl: "https://ngenioussolutions.sharepoint.com/sites/salestool",
+  commonSiteUrl: '/sites/common'
 };

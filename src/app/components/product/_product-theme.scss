@@ -1,0 +1,23 @@
+@mixin product-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  app-product-home {
+    .mat-card {
+      background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      color: mat-color($primary, default-contrast);
+    }
+
+    a {
+      color: mat-color($primary, default-contrast);
+      text-decoration: none;
+    }
+  }
+}

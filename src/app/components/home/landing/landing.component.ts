@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sp } from "@pnp/sp";
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-landing',
@@ -8,11 +8,14 @@ import { sp } from "@pnp/sp";
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    sp.web.select("Title").get().then(w => {
-      console.log(`Web Title: ${w.Title}`);
-    });
+    this.render();
+  }
+
+  private async render(): Promise<void> {
+    const clients = await this.dataService.getClients("Clients");
+    console.log(clients);
   }
 }

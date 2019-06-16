@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './components/home/home.module';
+import { ProductModule } from './components/product/product.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
@@ -31,6 +32,7 @@ import { MatMenuModule } from '@angular/material/menu';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    ProductModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatSidenavModule,

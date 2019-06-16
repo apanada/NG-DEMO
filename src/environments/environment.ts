@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  webAbsoluteUrl: "http://localhost:8080"
+  webAbsoluteUrl: "http://localhost:8080",
+  commonSiteUrl: 'http://localhost:8081'
 };
 
 /*

@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
-@import './app/components//navigation/footer/footer-theme';
+@import './app/components/navigation/footer/footer-theme';
+@import './app/components/product/product-theme';
 
 @include mat-core();
 
@@ -52,6 +53,7 @@ $theme-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 }
 
 @include footer-theme($theme-theme);
+@include product-theme($theme-theme);
 
 html {
   background: rgba(226, 226, 226, 1) no-repeat center center fixed !important;

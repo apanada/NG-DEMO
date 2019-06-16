@@ -7,5 +7,5 @@ export interface IClient {
     RateCardEnabled: boolean;
     RateCard: string;
     IsActive: boolean;
-    IndustryId: number;
+    IndustryId: number[];
 }
