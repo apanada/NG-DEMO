@@ -5,6 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductHomeComponent } from './product-home/product-home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [ProductHomeComponent],
@@ -12,7 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     ProductRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonToggleModule
   ]
 })
 export class ProductModule { }

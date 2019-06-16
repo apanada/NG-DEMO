@@ -1,14 +1,31 @@
-<mat-card>
-  <mat-card-header>
-    <div mat-card-avatar>avatar</div>
-    <mat-card-title>title</mat-card-title>
-    <mat-card-subtitle>sub-header</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    content
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>actionOne</button>
-    <button mat-button>actionTwo</button>
-  </mat-card-actions>
-</mat-card>
+<div class="product-details">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>CRISIS SIMULATION</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <p> The best crisis response preparation is proactive, so you're ready when the real thing happens.
+          And the best way to prepare for a reputation crisis is to simulate one, so you can discover the weak points in
+          your processes and streamline your response.
+        </p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          Learn
+        </mat-button-toggle>
+        <mat-button-toggle value="center" aria-label="Text align center">
+          FAQ's
+        </mat-button-toggle>
+        <mat-button-toggle value="right" aria-label="Text align right">
+          Supporting Material
+        </mat-button-toggle>
+        <mat-button-toggle value="justify" disabled aria-label="Text align justify">
+          Start Estimation
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-card-actions>
+  </mat-card>
+</div>

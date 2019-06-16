@@ -6,13 +6,38 @@
   $foreground: map-get($theme, foreground);
 
   app-product-home {
-    .mat-card {
-      background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      color: mat-color($primary, default-contrast);
+    .product-details {
+      .mat-card {
+        background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: mat-color($primary, default-contrast);
+        padding-bottom: 0;
+      }
+
+      .mat-card-content {
+        width: 60%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: end;
+        text-align: justify;
+      }
+
+      @media screen and (max-width: 600px) {
+        .mat-card-content {
+          width: 90%;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
     }
 
     a {
