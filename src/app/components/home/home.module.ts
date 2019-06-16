@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 
 import { sp } from '@pnp/sp';
 import { environment } from 'src/environments/environment';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent, data: { breadcrumb: 'Home' } }
@@ -21,7 +22,7 @@ sp.setup({
 });
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [LandingComponent, AboutComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

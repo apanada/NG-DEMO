@@ -1,0 +1,25 @@
+.about-container {
+  p {
+    font-size: 12pt;
+    text-align: justify;
+  }
+
+  span {
+    display: inline-block;
+
+    &.clear {
+      &.both {
+        display: flex;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .container-title {
+    p {
+      text-align: center;
+      font-size: 16pt;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<div fxLayout fxLayoutAlign="flex-start" fxLayout="row wrap" fxLayout.xs="column">
+<div fxFlex fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayout.xs="column wrap">
   <ol class="breadcrumb">
     <li *ngFor="let breadcrumb of breadcrumbs | async; last as isLast;" class="breadcrumb-item"
       [ngClass]="{'active': isLast, 'linkable': !isLast}" aria-current="page">

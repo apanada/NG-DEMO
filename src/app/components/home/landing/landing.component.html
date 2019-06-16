@@ -1,6 +1,8 @@
-<div class="container" fxLayout fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px"
+<div class="container" fxLayout fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center center"
   fxLayoutGap.xs="5px">
-  <div class="item item-1" fxFlex="30%">
+  <div class="item item-1" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]; let i =index" [fxFlexOrder]="i+1"
+    fxFlex="0 0 calc(33.3% - 12px)" [ngStyle.gt-xs]="{'margin.px': '5', 'margin-bottom.px': '10'}" fxFlex.xs="0 0 100%"
+    [ngStyle.xs]="{'margin.px': null, 'margin-bottom.px': 10}">
     <mat-card>
       <mat-card-header>
         <mat-card-title>DEFINE</mat-card-title>
@@ -16,36 +18,5 @@
       </mat-card-actions>
     </mat-card>
   </div>
-  <div class="item item-2" fxFlex="30%" fxFlexOrder="3">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>ARTICULATE</mat-card-title>
-        <mat-card-subtitle> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        content
-      </mat-card-content>
-      <mat-card-actions>
-        <span>$20K - $40K</span>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  <div class="item item-3" fxFlex="30%">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>EXPRESS</mat-card-title>
-        <mat-card-subtitle> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        content
-      </mat-card-content>
-      <mat-card-actions>
-        <span>$20K - $40K</span>
-      </mat-card-actions>
-    </mat-card>
-  </div>
 </div>
+<app-about></app-about>
