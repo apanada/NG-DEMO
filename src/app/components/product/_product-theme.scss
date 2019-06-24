@@ -8,7 +8,7 @@
   app-product-home {
     .product-details {
       .mat-card {
-        background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
+        background: url("https://capitolcommunicator.com/wp-content/uploads/2016/04/fleishmanhillard-logo.jpg") 100% 65%;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -29,6 +29,15 @@
         align-items: center;
         justify-content: end;
         text-align: justify;
+      }
+
+      .mat-card-actions {
+        padding-top: 3rem;
+        text-align: center;
+      }
+
+      .mat-button-toggle-checked {
+        border-bottom: 3px solid #1c3a71;
       }
 
       @media screen and (max-width: 600px) {

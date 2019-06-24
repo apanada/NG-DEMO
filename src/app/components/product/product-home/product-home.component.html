@@ -1,31 +1,96 @@
-<div class="product-details">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>CRISIS SIMULATION</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div>
-        <p> The best crisis response preparation is proactive, so you're ready when the real thing happens.
-          And the best way to prepare for a reputation crisis is to simulate one, so you can discover the weak points in
-          your processes and streamline your response.
-        </p>
+<div class="product-details-container">
+  <div class="product-details">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>CRISIS SIMULATION</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <p> The best crisis response preparation is proactive, so you're ready when the real thing happens.
+            And the best way to prepare for a reputation crisis is to simulate one, so you can discover the weak points
+            in
+            your processes and streamline your response.
+          </p>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle value="left" aria-label="Text align left">
+            Learn
+          </mat-button-toggle>
+          <mat-button-toggle value="center" aria-label="Text align center">
+            FAQ's
+          </mat-button-toggle>
+          <mat-button-toggle value="right" aria-label="Text align right">
+            Supporting Material
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div>
+    <div class="container" fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center center"
+      [ngStyle.gt-xs]="{'margin-top.px': '40'}" [ngStyle.xs]="{'margin-top.px': '30'}">
+      <div class="item item-1" *ngFor="let item of [1, 2, 3, 4]; let i =index" [fxFlexOrder]="i+1"
+        fxFlex="0 0 calc(33.3% - 12px)" [ngStyle.gt-xs]="{'margin.px': '5', 'margin-bottom.px': '10'}"
+        fxFlex.xs="0 0 100%" [ngStyle.xs]="{'margin.px': null, 'margin-bottom.px': 10}">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>DEFINE</mat-card-title>
+            <mat-card-subtitle> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            content
+          </mat-card-content>
+          <mat-card-actions>
+            <span>$20K - $40K</span>
+          </mat-card-actions>
+        </mat-card>
       </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left" aria-label="Text align left">
-          Learn
-        </mat-button-toggle>
-        <mat-button-toggle value="center" aria-label="Text align center">
-          FAQ's
-        </mat-button-toggle>
-        <mat-button-toggle value="right" aria-label="Text align right">
-          Supporting Material
-        </mat-button-toggle>
-        <mat-button-toggle value="justify" disabled aria-label="Text align justify">
-          Start Estimation
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </mat-card-actions>
-  </mat-card>
+    </div>
+  </div>
+  <div>
+    <div class="faq-container-title" fxFlex fxLayout="row" fxLayout.xs="column wrap" fxLayout.md="column wrap"
+      fxLayoutAlign="center stretch">
+      <p>
+        <b>FAQ's</b>
+      </p>
+    </div>
+  </div>
+  <div>
+    <div [ngStyle.gt-xs]="{'margin.px': '0 10', 'margin-bottom.px': '10'}"
+      [ngStyle.xs]="{'margin.px': null, 'margin-bottom.px': 10}">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal data
+            </mat-panel-title>
+            <mat-panel-description>
+              Type your name and age
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>
+<div>
+  <div [innerHtml]="yt_iframe_html" width="640" height="360"></div>
+  <div [innerHtml]="vimeo_iframe_html"></div>
+  <div [innerHtml]="dm_iframe_html"></div>
 </div>
